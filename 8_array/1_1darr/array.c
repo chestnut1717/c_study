@@ -29,5 +29,13 @@ int main(void) {
     // 8번 원소는 6
     // 지정해주지 않은 원소는 기본값인 0을 가지게 될 것
     int c[10] = {5, 1, 9, [4] = 3, 7, 2, [8] = 6};
+
+    // sizeof를 통해 배열 초기화
+    // 배열의 크기가 달라지더라도 Loop 건드릴 필요가 없다
+    int arr[10];
+    for (int i = 0; i < sizeof(arr) / sizeof(arr[0]); ++i) {
+        a[i] = 0;
+    }
+
     return 0;
 }
